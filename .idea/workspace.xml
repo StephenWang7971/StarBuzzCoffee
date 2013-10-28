@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Coffee.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382925971349" ignored="false" />
     <file path="/Buy.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382927063161" ignored="false" />
-    <file path="/Client.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382930771504" ignored="false" />
+    <file path="/Client.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382931212577" ignored="false" />
     <file path="/PlainTea.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382925910391" ignored="false" />
     <file path="/fragment.java" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382928756219" ignored="false" />
     <file path="/Sugar.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382925796173" ignored="false" />
@@ -19,10 +19,10 @@
     <file path="/Honey.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382925877909" ignored="false" />
     <file path="/Coke.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382925955292" ignored="false" />
     <file path="/Drinkable.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382930569256" ignored="false" />
-    <file path="/Order.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382930493798" ignored="false" />
+    <file path="/Order.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382931087669" ignored="false" />
     <file path="/Dressable.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382929852701" ignored="false" />
     <file path="/LoveFeeling.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382929236961" ignored="false" />
-    <file path="/DiscountStrategy.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382929125835" ignored="false" />
+    <file path="/DiscountStrategy.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382931109399" ignored="false" />
     <file path="/LoversEmbrace.groovy" changelist="e5bdf451-ac24-4043-9763-ed251fc8dfd7" time="1382930075923" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +87,7 @@
       <file leaf-file-name="Order.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sec/starbuzz/model/Order.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="44" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0">
+            <state line="9" column="58" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#32#83#0" expanded="true" />
               </folding>
@@ -95,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Client.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sec/starbuzz/Client.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="33" selection-start="3151" selection-end="3151" vertical-scroll-proportion="0.83573484">
+            <state line="127" column="50" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#26#61#0" expanded="true" />
               </folding>
@@ -162,10 +162,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiscountStrategy.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DiscountStrategy.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sec/starbuzz/model/DiscountStrategy.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="10" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+            <state line="6" column="31" selection-start="134" selection-end="134" vertical-scroll-proportion="0.32853025">
               <folding />
             </state>
           </provider>
@@ -202,10 +202,10 @@
         <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/condiment/Milk.groovy" />
         <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/condiment/Mocha.groovy" />
         <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/condiment/Sugar.groovy" />
-        <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/Order.groovy" />
         <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/Drinkable.groovy" />
-        <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/DiscountStrategy.groovy" />
+        <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/Order.groovy" />
         <option value="$PROJECT_DIR$/src/com/sec/starbuzz/Client.groovy" />
+        <option value="$PROJECT_DIR$/src/com/sec/starbuzz/model/DiscountStrategy.groovy" />
       </list>
     </option>
   </component>
@@ -540,7 +540,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -557,7 +557,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318182" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -716,16 +716,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sec/starbuzz/model/DiscountStrategy.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="10" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sec/starbuzz/model/Order.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="44" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0">
+        <state line="9" column="58" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#32#83#0" expanded="true" />
           </folding>
@@ -734,10 +727,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sec/starbuzz/Client.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="33" selection-start="3151" selection-end="3151" vertical-scroll-proportion="0.83573484">
+        <state line="127" column="50" selection-start="3420" selection-end="3420" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#26#61#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sec/starbuzz/model/DiscountStrategy.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="31" selection-start="134" selection-end="134" vertical-scroll-proportion="0.32853025">
+          <folding />
         </state>
       </provider>
     </entry>

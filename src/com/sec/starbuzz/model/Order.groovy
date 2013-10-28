@@ -7,6 +7,8 @@ import com.sec.starbuzz.model.condiment.LoversEmbrace
 class Order {
     public List<Drinkable> drinkables = new ArrayList<Drinkable>();
 
+    DiscountStrategy fridaySpecialDiscount = new DiscountStrategy(0.9f);
+
     public void buy() {
         drinkables.each({ e -> e.buy() })
         print "|Total=" + total();
@@ -16,6 +18,9 @@ class Order {
     public float total() {
         float total = 0;
         drinkables.each { e -> total += e.getPrice() }
+        if (fridaySpecialDiscount.enabled) {
+            total *= fridaySpecialDiscount.rate;
+        }
         return total;
     }
 

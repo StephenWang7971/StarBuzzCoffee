@@ -117,6 +117,14 @@ class Client {
         order19.append(new Lemon());
         order19.append(new LoversEmbrace());
         order19.buy();
+
+
+        Order order20 = new Order();
+        order20.fridaySpecialDiscount.enabled =true;    //TODO..it is too opened.
+        order20.append(new LoveFeelings());
+        order20.append(new Lemon());
+        order20.append(new LoversEmbrace());
+        order20.buy();
     }
 
 }
