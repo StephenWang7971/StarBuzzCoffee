@@ -1,14 +1,13 @@
 package com.sec.starbuzz.model
 
-import com.sec.starbuzz.model.beverage.LoveFeelings
-import com.sec.starbuzz.model.condiment.LoversEmbrace
 
 import java.text.DecimalFormat
 
 class Order {
-    public List<Drinkable> drinkables = new ArrayList<Drinkable>();
+    List<Drinkable> drinkables = new ArrayList<Drinkable>()
 
-    DiscountStrategy fridaySpecialDiscount = new DiscountStrategy(0.9f);
+    //TODO this influenced too much.
+    //DiscountStrategy fridaySpecialDiscount = new DiscountStrategy(0.9f)
 
     public void buy() {
         DecimalFormat formatter = new DecimalFormat("#.00");
@@ -18,31 +17,32 @@ class Order {
             }
             drinkables.get(i).buy()
         }
-        print "|Total=" + formatter.format(total());
+        print "|Total=" + formatter.format(total())
         println();
     }
 
     public BigDecimal total() {
         BigDecimal total = 0;
         drinkables.each { e -> total += e.getPrice() }
-        if (fridaySpecialDiscount.enabled) {
-            total *= fridaySpecialDiscount.rate;
-        }
-        return total;
+       // if (fridaySpecialDiscount.enabled) {
+       //     total *= fridaySpecialDiscount.rate
+       // }
+        return total
     }
 
     def append(Drinkable drinkable) {
-        DiscountStrategy strategy = new DiscountStrategy();
-        if (drinkables.any { e -> e instanceof LoveFeelings }) {
-            strategy.enabled = true;
-            strategy.rate = new BigDecimal(0.8);
+        DiscountStrategy strategy = new DiscountStrategy()
 
-            if (drinkable instanceof LoversEmbrace) {
-                strategy.rate = 0.5f;
+        if (drinkables.any { e -> e.name.equals("Love Feelings") }) {
+            strategy.enabled = true
+            strategy.rate = new BigDecimal(0.8)
+
+            if (drinkable.name.equals("Lovers Embrace")) {
+                strategy.rate = 0.5f
             }
-            drinkable.strategy = strategy;
+            drinkable.strategy = strategy
         }
-        this.drinkables.add(drinkable);
+        this.drinkables.add(drinkable)
     }
 
 }
