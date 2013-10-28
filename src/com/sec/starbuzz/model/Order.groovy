@@ -6,10 +6,7 @@ import java.text.DecimalFormat
 class Order {
     List<Drinkable> drinkables = new ArrayList<Drinkable>()
 
-    //TODO this influenced too much.
-    //DiscountStrategy fridaySpecialDiscount = new DiscountStrategy(0.9f)
-
-    public void buy() {
+    public void buy(BigDecimal discountRate = null) {
         DecimalFormat formatter = new DecimalFormat("#.00");
         for (int i = 0; i < drinkables.size(); i++) {
             if (i != 0) {
@@ -18,15 +15,15 @@ class Order {
             drinkables.get(i).buy()
         }
         print "|Total=" + formatter.format(total())
+        if (discountRate != null) {
+            print "x" + formatter.format(discountRate) + "=" + formatter.format(total() * discountRate)
+        }
         println();
     }
 
     public BigDecimal total() {
         BigDecimal total = 0;
         drinkables.each { e -> total += e.getPrice() }
-       // if (fridaySpecialDiscount.enabled) {
-       //     total *= fridaySpecialDiscount.rate
-       // }
         return total
     }
 

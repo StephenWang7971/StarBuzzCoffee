@@ -111,11 +111,10 @@ class Client {
         order19.buy()
 
         Order order20 = new Order()
-        //order20.fridaySpecialDiscount.enabled = true    //TODO..it is too opened.
         order20.append(new Drinkable("Love Feelings", 49f))
         order20.append(new Drinkable("Lemon", 5f, Drinkable.Category.CONDIMENT))
         order20.append(new Drinkable("Lovers Embrace", 21f, Drinkable.Category.CONDIMENT))
-        order20.buy()
+        order20.buy(0.9f)
     }
 
 }
