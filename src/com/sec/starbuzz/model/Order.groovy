@@ -31,16 +31,16 @@ class Order {
     }
 
     def append(Drinkable drinkable) {
-        DiscountStrategy strategy = new DiscountStrategy()
+
+        BigDecimal discountRate = 1f
 
         if (drinkables.any { e -> e.name.equals("Love Feelings") }) {
-            strategy.enabled = true
-            strategy.rate = new BigDecimal(0.8)
+            discountRate = 0.8f
 
             if (drinkable.name.equals("Lovers Embrace")) {
-                strategy.rate = 0.5f
+                discountRate = 0.5f
             }
-            drinkable.strategy = strategy
+            drinkable.discountRate = discountRate
         }
         this.drinkables.add(drinkable)
     }

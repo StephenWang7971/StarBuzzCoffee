@@ -102,12 +102,12 @@ class Client {
         order17.buy()
 
         Order order18 = new Order()
-        order18.append(new Drinkable("Milk", 3.5f, Drinkable.Category.CONDIMENT, new DiscountStrategy(1f)))
+        order18.append(new Drinkable("Milk", 3.5f, Drinkable.Category.CONDIMENT, 1f))
         order18.buy()
 
         Order order19 = new Order()
         order19.append(new Drinkable("Lemon", 5f))
-        order19.append(new Drinkable("Lovers Embrace", 21f, Drinkable.Category.CONDIMENT, new DiscountStrategy(0.8f)))
+        order19.append(new Drinkable("Lovers Embrace", 21f, Drinkable.Category.CONDIMENT, 0.8f))
         order19.buy()
 
         Order order20 = new Order()

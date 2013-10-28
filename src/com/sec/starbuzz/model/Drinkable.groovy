@@ -5,32 +5,32 @@ import java.text.DecimalFormat
 class Drinkable {
     BigDecimal price
     String name
-    DiscountStrategy strategy
+    BigDecimal discountRate
     Category category
 
     enum Category {
        BEVERAGE, CONDIMENT
     }
 
-    Drinkable(String name, BigDecimal price, Category category = Category.BEVERAGE, DiscountStrategy strategy = null) {
+    Drinkable(String name, BigDecimal price, Category category = Category.BEVERAGE, BigDecimal discountRate = null) {
         this.name = name
         this.price = price
         this.category = category
-        this.strategy = strategy
+        this.discountRate = discountRate
     }
 
     def buy() {
         DecimalFormat formatter = new DecimalFormat("#.00")
-        if (strategy != null && strategy.enabled && strategy.rate != 1f) {
-            print name + "(" + formatter.format(price) + "*" + formatter.format(strategy.rate) + ")"
+        if (discountRate != null && discountRate != 1f) {
+            print name + "(" + formatter.format(price) + "*" + formatter.format(discountRate) + ")"
         } else {
             print name + "(" + formatter.format(price) + ")"
         }
     }
 
     def BigDecimal getPrice() {
-        if (strategy != null && strategy.enabled) {
-            return price * strategy.rate
+        if (discountRate != null) {
+            return price * discountRate
         } else {
             return price
         }
