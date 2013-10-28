@@ -1,9 +1,10 @@
 package com.sec.starbuzz.model.condiment
 
 import com.sec.starbuzz.model.DiscountStrategy
+import com.sec.starbuzz.model.Drinkable
 
 
-class LoversEmbrace extends Dressable {
+class LoversEmbrace extends Drinkable {
     public LoversEmbrace() {
         this.name = "Love Embrace";
         this.price = 21f;

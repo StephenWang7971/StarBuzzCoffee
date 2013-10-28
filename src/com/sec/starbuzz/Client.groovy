@@ -102,6 +102,21 @@ class Client {
         order16.append(new Lemon());
         order16.append(new LoversEmbrace());
         order16.buy();
+
+
+        Order order17 = new Order();
+        order17.append(new Coffee());
+        order17.append(new Sugar());
+        order17.buy();
+
+        Order order18 = new Order();
+        order18.append(new Milk());
+        order18.buy();
+
+        Order order19 = new Order();
+        order19.append(new Lemon());
+        order19.append(new LoversEmbrace());
+        order19.buy();
     }
 
 }
