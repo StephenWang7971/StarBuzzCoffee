@@ -5,9 +5,10 @@ import com.sec.starbuzz.model.DiscountStrategy
 abstract class Drinkable {
     public float price;
     public String name;
+    public DiscountStrategy strategy;
 
-    def buy(DiscountStrategy strategy) {
-        if (strategy.enabled){
+    def buy() {
+        if (strategy != null && strategy.enabled) {
             print name + "(" + String.valueOf(price) + "*" + strategy.discountRate() + ")";
         } else {
             print name + "(" + String.valueOf(price) + ")";

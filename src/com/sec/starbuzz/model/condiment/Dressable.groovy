@@ -5,12 +5,20 @@ import com.sec.starbuzz.model.DiscountStrategy
 abstract class Dressable {
     public float price;
     public String name;
+    public DiscountStrategy strategy;
 
-    def buy(DiscountStrategy strategy) {
-        if (strategy.enabled){
-            print name + "(" + String.valueOf(price) + "*" + strategy.discountRate() + ")";
+    def buy() {
+        if (strategy != null && strategy.enabled) {
+            print "+" + name + "(" + String.valueOf(price) + "*" + strategy.discountRate() + ")";
         } else {
-            print name + "(" + String.valueOf(price) + ")";
+            print "+" + name + "(" + String.valueOf(price) + ")";
         }
+    }
+
+    def float getPrice() {
+        if (strategy != null && strategy.enabled) {
+            return price * strategy.discountRate(); ;
+        }
+        return price;
     }
 }

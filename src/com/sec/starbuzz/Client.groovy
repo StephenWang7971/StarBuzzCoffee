@@ -86,6 +86,22 @@ class Client {
         order13.append(new Chocolate());
         order13.append(new Mocha());
         order13.buy();
+
+        Order order14 = new Order();
+        order14.append(new Beer());
+        order14.append(new LoversEmbrace());
+        order14.buy();
+
+        Order order15 = new Order();
+        order15.append(new LoveFeelings());
+        order15.append(new LoversEmbrace());
+        order15.buy();
+
+        Order order16 = new Order();
+        order16.append(new LoveFeelings());
+        order16.append(new Lemon());
+        order16.append(new LoversEmbrace());
+        order16.buy();
     }
 
 }
