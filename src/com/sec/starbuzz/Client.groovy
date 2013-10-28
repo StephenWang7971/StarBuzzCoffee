@@ -1,17 +1,8 @@
 package com.sec.starbuzz
 
 import com.sec.starbuzz.model.Order
-import com.sec.starbuzz.model.beverage.Beer
-import com.sec.starbuzz.model.beverage.BlackTea
-import com.sec.starbuzz.model.beverage.Coffee
-import com.sec.starbuzz.model.beverage.Coke
-import com.sec.starbuzz.model.beverage.GreenTea
-import com.sec.starbuzz.model.beverage.PlainTea
-import com.sec.starbuzz.model.condiment.Chocolate
-import com.sec.starbuzz.model.condiment.Honey
-import com.sec.starbuzz.model.condiment.Lemon
-import com.sec.starbuzz.model.condiment.Milk
-import com.sec.starbuzz.model.condiment.Mocha
+import com.sec.starbuzz.model.beverage.*
+import com.sec.starbuzz.model.condiment.*
 
 class Client {
     public static void main(def args) {
@@ -74,6 +65,27 @@ class Client {
         order10.append(new Chocolate());
         order10.append(new Mocha());
         order10.buy();
+
+
+        Order order11 = new Order();
+        order11.append(new LoveFeelings());
+        order11.buy();
+
+
+        Order order12 = new Order();
+        order12.append(new LoveFeelings());
+        order12.append(new Lemon());
+        order12.buy();
+
+
+        Order order13 = new Order();
+        order13.append(new LoveFeelings());
+        order13.append(new Milk());
+        order13.append(new Honey());
+        order13.append(new Lemon());
+        order13.append(new Chocolate());
+        order13.append(new Mocha());
+        order13.buy();
     }
 
 }
