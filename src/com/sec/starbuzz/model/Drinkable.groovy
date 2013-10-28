@@ -2,20 +2,23 @@ package com.sec.starbuzz.model
 
 import com.sec.starbuzz.model.DiscountStrategy
 
+import java.text.DecimalFormat
+
 abstract class Drinkable {
-    public float price;
+    public BigDecimal price;
     public String name;
     public DiscountStrategy strategy;
 
     def buy() {
+        DecimalFormat formatter = new DecimalFormat("#.00");
         if (strategy != null && strategy.enabled) {
-            print name + "(" + String.valueOf(price) + "*" + strategy.rate + ")";
+            print name + "(" +formatter.format(price) + "*" + formatter.format(strategy.rate) + ")";
         } else {
-            print name + "(" + String.valueOf(price) + ")";
+            print name + "(" +formatter.format(price) + ")";
         }
     }
 
-    def float getPrice() {
+    def BigDecimal getPrice() {
         if (strategy != null && strategy.enabled) {
             return price * strategy.rate;
         } else {

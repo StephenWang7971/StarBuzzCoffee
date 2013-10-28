@@ -4,19 +4,22 @@ import com.sec.starbuzz.model.beverage.LoveFeelings
 
 import com.sec.starbuzz.model.condiment.LoversEmbrace
 
+import java.text.DecimalFormat
+
 class Order {
     public List<Drinkable> drinkables = new ArrayList<Drinkable>();
 
     DiscountStrategy fridaySpecialDiscount = new DiscountStrategy(0.9f);
 
     public void buy() {
+        DecimalFormat formatter = new DecimalFormat("#.00");
         drinkables.each({ e -> e.buy() })
-        print "|Total=" + total();
+        print "|Total=" + formatter.format(total());
         println();
     }
 
-    public float total() {
-        float total = 0;
+    public BigDecimal total() {
+        BigDecimal total = 0;
         drinkables.each { e -> total += e.getPrice() }
         if (fridaySpecialDiscount.enabled) {
             total *= fridaySpecialDiscount.rate;
@@ -29,7 +32,7 @@ class Order {
         DiscountStrategy strategy = new DiscountStrategy();
         if (drinkables.any {e -> e instanceof LoveFeelings}) {
             strategy.enabled = true;
-            strategy.rate = 0.8f;
+            strategy.rate = new BigDecimal(0.8);
 
             if (drinkable instanceof LoversEmbrace) {
                 strategy.rate = 0.5f;

@@ -2,11 +2,11 @@ package com.sec.starbuzz.model
 
 class DiscountStrategy {
     boolean enabled = false;
-    float rate;
+    BigDecimal rate;
 
     public DiscountStrategy() {
     }
-    public DiscountStrategy(float rate) {
+    public DiscountStrategy(BigDecimal rate) {
         this.rate = rate;
     }
 }
