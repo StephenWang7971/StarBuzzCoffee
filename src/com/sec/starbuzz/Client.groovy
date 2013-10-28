@@ -22,7 +22,6 @@ class Client {
         order3.append(new Coke());
         order3.buy();
 
-
         Order order4 = new Order();
         order4.append(new Coffee());
         order4.append(new Milk());
@@ -41,8 +40,6 @@ class Client {
         order7.append(new Coke());
         order7.append(new Lemon());
         order7.buy();
-
-
 
         Order order8 = new Order();
         order8.append(new Coffee());
@@ -66,17 +63,14 @@ class Client {
         order10.append(new Mocha());
         order10.buy();
 
-
         Order order11 = new Order();
         order11.append(new LoveFeelings());
         order11.buy();
-
 
         Order order12 = new Order();
         order12.append(new LoveFeelings());
         order12.append(new Lemon());
         order12.buy();
-
 
         Order order13 = new Order();
         order13.append(new LoveFeelings());
@@ -103,7 +97,6 @@ class Client {
         order16.append(new LoversEmbrace());
         order16.buy();
 
-
         Order order17 = new Order();
         order17.append(new Coffee());
         order17.append(new Sugar());
@@ -118,9 +111,8 @@ class Client {
         order19.append(new LoversEmbrace());
         order19.buy();
 
-
         Order order20 = new Order();
-        order20.fridaySpecialDiscount.enabled =true;    //TODO..it is too opened.
+        order20.fridaySpecialDiscount.enabled = true;    //TODO..it is too opened.
         order20.append(new LoveFeelings());
         order20.append(new Lemon());
         order20.append(new LoversEmbrace());

@@ -1,7 +1,6 @@
 package com.sec.starbuzz.model
 
 import com.sec.starbuzz.model.beverage.LoveFeelings
-
 import com.sec.starbuzz.model.condiment.LoversEmbrace
 
 import java.text.DecimalFormat
@@ -13,7 +12,12 @@ class Order {
 
     public void buy() {
         DecimalFormat formatter = new DecimalFormat("#.00");
-        drinkables.each({ e -> e.buy() })
+        for (int i = 0; i < drinkables.size(); i++) {
+            if (i != 0) {
+                print " + "
+            }
+            drinkables.get(i).buy()
+        }
         print "|Total=" + formatter.format(total());
         println();
     }
@@ -27,10 +31,9 @@ class Order {
         return total;
     }
 
-
     def append(Drinkable drinkable) {
         DiscountStrategy strategy = new DiscountStrategy();
-        if (drinkables.any {e -> e instanceof LoveFeelings}) {
+        if (drinkables.any { e -> e instanceof LoveFeelings }) {
             strategy.enabled = true;
             strategy.rate = new BigDecimal(0.8);
 

@@ -1,7 +1,5 @@
 package com.sec.starbuzz.model
 
-import com.sec.starbuzz.model.DiscountStrategy
-
 import java.text.DecimalFormat
 
 abstract class Drinkable {
@@ -12,9 +10,9 @@ abstract class Drinkable {
     def buy() {
         DecimalFormat formatter = new DecimalFormat("#.00");
         if (strategy != null && strategy.enabled) {
-            print name + "(" +formatter.format(price) + "*" + formatter.format(strategy.rate) + ")";
+            print name + "(" + formatter.format(price) + "*" + formatter.format(strategy.rate) + ")";
         } else {
-            print name + "(" +formatter.format(price) + ")";
+            print name + "(" + formatter.format(price) + ")";
         }
     }
 

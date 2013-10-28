@@ -6,6 +6,7 @@ class DiscountStrategy {
 
     public DiscountStrategy() {
     }
+
     public DiscountStrategy(BigDecimal rate) {
         this.rate = rate;
     }
